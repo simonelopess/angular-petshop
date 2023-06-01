@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-frame-page',
   template: '<app-navbar></app-navbar><router-outlet></router-outlet>',
 })
-export class LoginPageComponent {
+export class FramePageComponent {
 
 }
