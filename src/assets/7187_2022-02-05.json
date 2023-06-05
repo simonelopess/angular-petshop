@@ -1,0 +1,300 @@
+{
+  "uuid": "f27e58b0-99e4-4549-8083-281204edb195",
+  "lastMigration": 27,
+  "name": "7181",
+  "endpointPrefix": "v1",
+  "latency": 0,
+  "port": 3000,
+  "routes": [
+    {
+      "uuid": "e3298891-832a-493d-875b-7936dc95359c",
+      "documentation": "Retorna uma lista detalhada de todos produtos cadastrados",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "bab4b86f-b20c-47a8-ba91-a39977edd5dd",
+          "body": "[\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa09\",\n    \"title\": \"Cama M1 Urban\",\n    \"category\": \"accessories\",\n    \"description\": [\n      \"<ul><li><span><b>Pet:</b></span><span> Cachorros</span></li><li><span><b>Porte de Raça:</b></span><span> Grande, Médio e Pequeno</span></li><li><span><b>Idade:</b></span><span> Sênior, Adulto e Filhote</span></li><li><span><b>Material:</b></span><span> Plástico</span></li><li><span><b>Medidas<br>aproximadas:</b></span><span> Tamanho 8 (84 x 59,5 x h 25 cm), Tamanho 6 (70,5 x 52 x h 23,5 cm), Tamanho 4 (61,5 x 45 x h 21,5 cm), Tamanho 2 (52 x 36 x h 17,5 cm), Tamanho 12 (111 x 80,5 x h 33,5 cm), Tamanho 10 (93,5 x 68 x h 28 e5 cm)</span></li><li><span><b>Tipo:</b></span><span> Cama</span></li><li><span><b>Cor:</b></span><span> Bordô</span></li><li><span><b>Apresentação:</b></span><span> <p><span>Disponível nos tamanhos 2, 4, 6, 8, 10 e 12</span></p></span></li><li><span><b>Código de barras:</b></span><span> 8010690074689</span></li></ul>\\\",\\n        \\\"price\\\":5999,\\n        \\\"images\\\":[\\n            \\\"https://baltaio.blob.core.windows.net/courses/7180/cama-m1-urban-puppy.jpg\"\n    ],\n    \"price\": 10490,\n    \"images\": [\n      \"https://baltaio.blob.core.windows.net/courses/7180/racao-golden.png\"\n    ]\n  },\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa10\",\n    \"title\": \"Ração Golden Special Sabor Frango e Carne para Cães Adultos\",\n    \"category\": \"food\",\n    \"description\": \"<p>- Indicado para cães adultos;<br>- Livre de corantes e aromatizantes artificiais;<br>- Alimento rico em nutrientes;<br>- Promove o equilíbrio intestinal;<br>- Protege as articulações;<br>- Disponível em embalagens de 15kg e 20kg.</p>\",\n    \"price\": 10490,\n    \"images\": [\n      \"https://baltaio.blob.core.windows.net/courses/7180/racao-golden.png\"\n    ]\n  },\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa11\",\n    \"title\": \"Ração Royal Canin Golden Retriever - Cães Adultos - 12kg\",\n    \"category\": \"food\",\n    \"description\": \"<p>- Indicada para cães adultos; <br>- Específica para pets da raça Golden Retriever; <br>- Auxilia na manutenção do peso ideal; <br>- Mantém a saúde da musculatura cardíaca; <br>- Proporciona uma pele e pelagem mais saudáveis,<br>- Disponível em embalagem de 12kg. </p>\",\n    \"price\": 21999,\n    \"images\": [\n      \"https://baltaio.blob.core.windows.net/courses/7180/racao-royal-canin.png\"\n    ]\n  }\n]",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "99490a44-dead-423b-963c-7580c8fed36c",
+      "documentation": "Retorna uma lista detalhada de todos pets cadastrados",
+      "method": "get",
+      "endpoint": "pets",
+      "responses": [
+        {
+          "uuid": "273caa14-af50-40e9-a909-574296a6e851",
+          "body": "{}",
+          "latency": 800,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "005455c8-a39a-49ae-a2c5-244ba1f0a65b",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts/authenticate",
+      "responses": [
+        {
+          "uuid": "1c536b44-7f77-4f53-acb6-4c2ceb404445",
+          "body": "{\n  \"customer\": {\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "52ebd3fe-2876-4244-a64b-698d7f1b7470",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts/refresh-token",
+      "responses": [
+        {
+          "uuid": "c777e8b9-6e9d-4a53-af6f-ba6968acb046",
+          "body": "{\n  \"customer\": {\n  \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n  \"name\": \"Bruce Wayne\",\n  \"document\": \"04052789008\",\n  \"email\": \"customer@petshop.com\"\n    \n  },\\\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n  \n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "279dad96-50d7-4a8a-b076-62b431fc7dba",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "c9621498-b003-4a2e-a212-66a97ad9a1ce",
+          "body": "{\n  \"message\": \"Bem-vindo ao Dachshop!\"\n}",
+          "latency": 800,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "ac6b5473-8fce-49fd-8de6-8c4548ecb68b",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts/reset-password",
+      "responses": [
+        {
+          "uuid": "def57461-b352-458f-8e2b-a22ee7f02bf6",
+          "body": "{\n  \"message\": \"Uma nova senha foi gerada e enviada para seu E-mail!\"\n}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "27c73f74-0ce7-4713-b43a-705fd931ad0f",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "5ed038cf-8f3c-4ecf-812d-b1fe66d218ed",
+          "body": "{\n  \"message\": \"Dados atualizados com sucesso!\"\n}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "57bc9dce-074b-439c-80f0-2b5737a7f7bc",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "652496f4-22ee-4e23-9904-045f2a5fb1b0",
+          "body": "{\n  \"name\": \"Bruce Wayne\",\n  \"document\": \"015.418.850-66\",\n  \"email\": \"batman@balta.io\"\n}",
+          "latency": 1200,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET, POST, PUT, DELETE"
+    }
+  ],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "hostname": "",
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "e3298891-832a-493d-875b-7936dc95359c"
+    },
+    {
+      "type": "route",
+      "uuid": "99490a44-dead-423b-963c-7580c8fed36c"
+    },
+    {
+      "type": "route",
+      "uuid": "005455c8-a39a-49ae-a2c5-244ba1f0a65b"
+    },
+    {
+      "type": "route",
+      "uuid": "52ebd3fe-2876-4244-a64b-698d7f1b7470"
+    },
+    {
+      "type": "route",
+      "uuid": "279dad96-50d7-4a8a-b076-62b431fc7dba"
+    },
+    {
+      "type": "route",
+      "uuid": "ac6b5473-8fce-49fd-8de6-8c4548ecb68b"
+    },
+    {
+      "type": "route",
+      "uuid": "27c73f74-0ce7-4713-b43a-705fd931ad0f"
+    },
+    {
+      "type": "route",
+      "uuid": "57bc9dce-074b-439c-80f0-2b5737a7f7bc"
+    }
+  ]
+}
